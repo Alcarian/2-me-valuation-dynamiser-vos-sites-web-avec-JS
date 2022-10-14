@@ -19,33 +19,47 @@
     <title>Race to 100</title>
 </head>
 <body>
-    <div class="container">
+
+    <div class="overlay hidden"></div>
+
+    <div class="rules hidden">
+        <button class="closeRules">&times;</button>
+        <h3>Rules</h3>
+            <p>1) Current Score gets wasted if 1 comes on the dice.</p>
+            <p>2) By pressing hold the current score is added to the total score and the turn is shifted to next user.</p>
+            <p>3) The user reaching first to hundred wins the game.</p>
+    </div>
+
+    <!-- Start section players -->
+    <main>
+        <section class="player-1 player player-active">
+            <h2 class="name" id="name-0">Player 1</h2>
+            <h2 class="score" id="score-0">0</h2>
+            <div class="current">
+                <p class="current-label">Current</p>
+                <p class="current-score" id="current--0">0</p>
+            </div>
+        </section>
+
+        <section class="player 2 player">
+            <h2 class="name" id="name-1">Player 2</h2>
+            <h2 class="score" id="score-1">0</h2>
+            <div class="current">
+                <p class="current-label">Current</p>
+                <p class="current-score" id="current--1">0</p>
+            </div>
+        </section>
 
         <!-- Start Buttons  -->
 
-        <div class="rules">
-            <button class="button-rules" id="rules">Rules</button>
-            <h3>Rules</h3>
-                <p>1) Current Score gets wasted if 1 comes on the dice.</p>
-                <p>2) By pressing hold the current score is added to the total score and the turn is shifted to next user.</p>
-                <p>3) The user reaching first to hundred wins the game.</p>
-        </div>
-
-        <div class="button-newgame">
-            <button class="newgame" id="new-game">New Game</button>
-        </div>
-
-        <div class="button-rolldice">
-            <button class="rolldice">ROLL DICE</button>
-        </div>
-
-        <div class="button-hold">
-            <button class="hold">HOLD</button>
-        </div>
+        <button class="btn btn-rules">🗣 Rules</button>
+        <button class="btn newgame" id="new-game">🔄 New Game</button>
+        <button class="btn rolldice">🎲 ROLL DICE</button>
+        <button class="btn hold">📥 HOLD</button>
 
         <!-- End Buttons -->
-
-    </div>
+    </main>
+    <!-- End section players -->
     
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
