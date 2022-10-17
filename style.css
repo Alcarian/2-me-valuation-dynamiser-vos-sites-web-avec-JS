@@ -36,7 +36,7 @@ body {
 } 
 
 .btn-rules {
-  top: 10rem;
+  top: 11rem;
 }
 
 .rules {
@@ -197,6 +197,41 @@ body {
 }
 
 /*End Playeurs */
+
+/* Start Game */
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 22.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+.winner{
+  background-color: greenyellow;
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+
+/* End Game */
 
 main {
   position: relative;
