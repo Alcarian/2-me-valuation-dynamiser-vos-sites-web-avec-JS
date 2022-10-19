@@ -27,9 +27,9 @@ let currentScore = 0;
 let activePlayer = 0;
 
 let nextUserTurn = function () {
-  currentScore = 0;
-  document.getElementById(`current-${activePlayer}`).textContent = currentScore;
+  document.getElementById(`current-${activePlayer}`).textContent = 0;
   activePlayer = activePlayer === 0 ? 1 : 0;
+  currentScore = 0;
   player0.classList.toggle("player-active");
   player1.classList.toggle("player-active");
   play2();
@@ -84,7 +84,7 @@ btnRoll.addEventListener("click", function () {
 
   diceImg.classList.remove("hidden");
 
-  diceImg.src = `dice-${randomNumber}.png`;
+  diceImg.src = "./img/dice-" + randomNumber + ".png";
 
   if (randomNumber !== 1) {
     currentScore = currentScore + randomNumber;

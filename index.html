@@ -7,14 +7,6 @@
     <meta name="description" content="Game for the second evaluation Studi, boost your
     website with javascript">
     <link type="image/png" sizes="96x96" rel="icon" href="./img/icon-dice.png">
-    <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
-        crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>Race to 100</title>
 </head>
@@ -32,8 +24,8 @@
 
     <!-- Start section players -->
     <main>
-        <img src="./img/dice-1.png" alt="Playing dice" class="dice" />
-        <section class="player-1 player player-active">
+        
+        <section class="player-0 player player-active">
             <h2 class="name" id="name-0">Player 1</h2>
             <h2 class="score" id="score-0">0</h2>
             <div class="current">
@@ -42,7 +34,7 @@
             </div>
         </section>
 
-        <section class="player 2 player">
+        <section class="player-1 player">
             <h2 class="name" id="name-1">Player 2</h2>
             <h2 class="score" id="score-1">0</h2>
             <div class="current">
@@ -53,6 +45,7 @@
 
         <!-- Start Buttons  -->
 
+        <img src="./img/dice-1.png" alt="Playing dice" class="dice" />
         <button class="btn btn-rules">🗣 Rules</button>
         <button class="btn newgame" id="new-game">🔄 New Game</button>
         <button class="btn rolldice">🎲 ROLL DICE</button>
@@ -62,11 +55,6 @@
     </main>
     <!-- End section players -->
     
-    <script 
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
-        crossorigin="anonymous">
-    </script>
     <script src="./script.js"></script>
 </body>
 </html>
