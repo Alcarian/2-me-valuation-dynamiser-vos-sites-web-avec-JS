@@ -30,6 +30,36 @@ let totalScore = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
 
+// ****Start choose pseudo****
+
+let p1 = document.getElementById("name-0");
+let p2 = document.getElementById("name-1");
+
+function pseudo1() {
+  if (p1.innerHTML.length <= 0) {
+    p1.innerHTML = "PLAYER 1";
+  } else if (p1.innerHTML.length > 8) {
+    alert("Please to enter a name with 8 caracters maximum.");
+    p1.innerHTML = prompt("Choose a name for PLAYER 1:");
+    return pseudo1();
+  }
+}
+function pseudo2() {
+  if (p2.innerHTML.length <= 0) {
+    p2.innerHTML = "PLAYER 2";
+  } else if (p2.innerHTML.length > 8) {
+    alert("Please to enter a name with 8 caracters maximum.");
+    p2.innerHTML = prompt("Choose a name for PLAYER 2:");
+    return pseudo2();
+  }
+}
+
+p1.innerHTML = prompt("Choose a name for PLAYER 1:");
+pseudo1();
+p2.innerHTML = prompt("Choose a name for PLAYER 2:");
+pseudo2();
+// ****End choose pseudo****
+
 // ****Start change player and spins****
 
 let nextUserTurn = function () {
@@ -51,6 +81,7 @@ function spinChange() {
     spinner2.style.visibility = "visible";
   }
 }
+
 // ****End change player and spins****
 
 // ***********End conditions***************
@@ -87,12 +118,18 @@ btnNewGame.addEventListener("click", function () {
 
   score0.textContent = 0;
   score1.textContent = 0;
+  current0.textContent = 0;
+  current1.textContent = 0;
 
   diceImg.classList.add("hidden");
 
   totalScore = [0, 0];
   currentScore = 0;
   activePlayer = 0;
+  p1.innerHTML = prompt("Choose a name for PLAYER 1:");
+  pseudo1();
+  p2.innerHTML = prompt("Choose a name for PLAYER 2:");
+  pseudo2();
   spinChange();
 });
 
