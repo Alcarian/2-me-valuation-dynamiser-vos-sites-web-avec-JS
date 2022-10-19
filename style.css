@@ -22,6 +22,13 @@ body {
   justify-content: center;
 }
 
+#spin1 {
+  visibility: visible;
+}
+#spin2 {
+  visibility: hidden;
+}
+
 /* Start Rules */
 
 .overlay {

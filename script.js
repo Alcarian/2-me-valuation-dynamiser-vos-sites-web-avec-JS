@@ -1,4 +1,4 @@
-// Start Declare variables**************
+// *************Start Declare variables**************
 
 const btnRules = document.querySelector(".btn-rules");
 const rulesPage = document.querySelector(".rules");
@@ -14,17 +14,23 @@ const current0 = document.getElementById("current-0");
 const current1 = document.getElementById("current-1");
 const btnHold = document.querySelector(".hold");
 const diceImg = document.querySelector(".dice");
+const spinner1 = document.getElementById("spin1");
+const spinner2 = document.getElementById("spin2");
 
-// End declare variables**************
+// ************End declare variables**************
 
-// Starting conditions**************
+// ************Starting conditions**************
 
 score0.textContent = 0;
 score1.textContent = 0;
 
+diceImg.classList.add("hidden");
+
 let totalScore = [0, 0];
 let currentScore = 0;
 let activePlayer = 0;
+
+// ****Start change player and spins****
 
 let nextUserTurn = function () {
   document.getElementById(`current-${activePlayer}`).textContent = 0;
@@ -33,10 +39,23 @@ let nextUserTurn = function () {
   player0.classList.toggle("player-active");
   player1.classList.toggle("player-active");
   play2();
+  spinChange();
 };
-// End conditions***************
 
-// Start Rules page*************
+function spinChange() {
+  if (activePlayer == 0) {
+    spinner1.style.visibility = "visible";
+    spinner2.style.visibility = "hidden";
+  } else {
+    spinner1.style.visibility = "hidden";
+    spinner2.style.visibility = "visible";
+  }
+}
+// ****End change player and spins****
+
+// ***********End conditions***************
+
+// **********Start Rules page*************
 
 let closeRules = function () {
   rulesPage.classList.add("hidden");
@@ -52,12 +71,13 @@ btnCloseRules.addEventListener("click", closeRules);
 
 overlay1.addEventListener("click", closeRules);
 
-// End Rules page**************
+// *************End Rules page**************
 
-// Start New Game**************
+// ************Start New Game**************
 
 btnNewGame.addEventListener("click", function () {
   play4();
+
   document.querySelector(`.player-${activePlayer}`).classList.remove("winner");
 
   if (!player0.classList.contains("player-active")) {
@@ -73,12 +93,13 @@ btnNewGame.addEventListener("click", function () {
   totalScore = [0, 0];
   currentScore = 0;
   activePlayer = 0;
+  spinChange();
 });
 
-// End New Game************
+// ************End New Game************
 
-// Start Game************
-// Rolling Dice**************
+// ************Start Game************
+// ****Rolling Dice****
 
 btnRoll.addEventListener("click", function () {
   const randomNumber = Math.trunc(Math.random() * 6 + 1);
@@ -86,6 +107,7 @@ btnRoll.addEventListener("click", function () {
   diceImg.classList.remove("hidden");
 
   diceImg.src = "./img/dice-" + randomNumber + ".png";
+  spinChange();
 
   if (randomNumber !== 1) {
     currentScore = currentScore + randomNumber;
@@ -97,8 +119,8 @@ btnRoll.addEventListener("click", function () {
   }
 });
 
-// End Rolling Dice***************
-// Start Hold score***************
+// ****End Rolling Dice****
+// ****Start Hold score****
 
 btnHold.addEventListener("click", function () {
   totalScore[activePlayer] = totalScore[activePlayer] + currentScore;
@@ -116,9 +138,10 @@ btnHold.addEventListener("click", function () {
   }
 });
 
-// End Hold score**********
-// End Game************
-// Start sound effect********************
+// ****End Hold score****
+// ****************End Game************
+
+// ***********Start sound effect********************
 
 function play1() {
   let audio1 = document.getElementById("audio1");
@@ -142,4 +165,4 @@ function play4() {
   audio4.play();
 }
 
-//End sound effect*****************
+//*************End sound effect*****************

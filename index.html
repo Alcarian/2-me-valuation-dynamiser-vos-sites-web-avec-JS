@@ -7,6 +7,14 @@
     <meta name="description" content="Game for the second evaluation Studi, boost your
     website with javascript">
     <link type="image/png" sizes="96x96" rel="icon" href="./img/icon-dice.png">
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+        crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>Race to 100</title>
 </head>
@@ -31,6 +39,9 @@
     <main>
         
         <section class="player-0 player player-active">
+            <div class="spinner-grow spinner-grow-sm text-danger float-end" id="spin1" role="status">
+                <div class="visually-hidden">Loading...</div>
+            </div>
             <h2 class="name" id="name-0">Player 1</h2>
             <h2 class="score" id="score-0">0</h2>
             <div class="current">
@@ -40,6 +51,9 @@
         </section>
 
         <section class="player-1 player">
+            <div class="spinner-grow spinner-grow-sm text-danger float-end" id="spin2" role="status">
+                <div class="visually-hidden">Loading...</div>
+            </div>
             <h2 class="name" id="name-1">Player 2</h2>
             <h2 class="score" id="score-1">0</h2>
             <div class="current">
@@ -60,6 +74,11 @@
     </main>
     <!-- End section players -->
     
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+        crossorigin="anonymous">
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>
