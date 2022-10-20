@@ -122,6 +122,8 @@ btnNewGame.addEventListener("click", function () {
   current1.textContent = 0;
 
   diceImg.classList.add("hidden");
+  btnHold.style.visibility = "visible";
+  btnRoll.style.visibility = "visible";
 
   totalScore = [0, 0];
   currentScore = 0;
