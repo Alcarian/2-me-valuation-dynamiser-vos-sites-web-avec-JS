@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 60%;
   box-sizing: border-box;
 }
 
@@ -17,8 +17,27 @@ body {
   height: 100vh;
   color: #333;
   background-image: linear-gradient(45deg, #1d1c1f 0%, #1d7ca1 100%);
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+
+.container {
+  display: flex;
   justify-content: center;
 }
 
@@ -29,7 +48,7 @@ body {
   visibility: hidden;
 }
 
-/* Start Rules */
+/* ------ Start Rules ------ */
 
 .overlay {
   position: absolute;
@@ -83,9 +102,9 @@ body {
   display: none;
 }
 
-/* End Rules */
+/* ------ End Rules ------ */
 
-/* Start buttons */
+/* ------ Start buttons ------ */
 
 .btn {
   position: absolute;
@@ -135,14 +154,14 @@ body {
   outline: none;
 }
 
-/*End Buttons */
+/* ------ End Buttons ------ */
 
-/*Start Players */
+/* ------ Start Players ------ */
 
 .player {
+  display: flex;
   flex: 50%;
   padding: 9rem;
-  display: flex;
   flex-direction: column;
   align-items: center;
   transition: all 0.2s;
@@ -156,6 +175,8 @@ body {
   word-spacing: 2px;
   font-weight: 300;
   margin-bottom: 1rem;
+  text-align: justify;
+  text-align: center;
 }
 
 .score {
@@ -190,6 +211,8 @@ body {
   padding: 2rem;
   text-align: center;
   transition: all 0.75s;
+  text-align: justify;
+  text-align: center;
 }
 
 .current-label {
@@ -197,15 +220,17 @@ body {
   margin-bottom: 1rem;
   font-size: 1.7rem;
   color: #ddd;
+  text-align: justify;
+  text-align: center;
 }
 
 .current-score {
   font-size: 3.5rem;
 }
 
-/*End Playeurs */
+/* ------ End Playeurs ------ */
 
-/* Start Game */
+/* ------ Start Game ------ */
 
 .dice {
   position: absolute;
@@ -238,17 +263,74 @@ body {
   color: #c7365f;
 }
 
-/* End Game */
+/* ------ End Game ------ */
 
-main {
-  position: relative;
-  width: 100rem;
-  height: 60rem;
-  background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(200px);
-  filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
-  overflow: hidden;
-  display: flex;
+/* ------ Start Medias queries ------ */
+
+@media screen and (max-width: 800px) {
+  .current-score, .name {
+    font-size: 2rem;
+  }
+
+  .score {
+    font-size: 4rem;
+  }
+
+  * {
+    font-size: 40%;
+  }
+
+  .btn::first-letter {
+    font-size: 0.5rem;
 }
+
+  .dice {
+    height: 5rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .rules h3 {
+    font-size: 2.5rem;
+  }
+  
+  .rules p {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .current {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media screen and (max-width: 570px) {
+    .player {
+      padding: 4rem;
+      flex: 25%;
+    }
+
+    .btn-rules {
+      top: 16rem;
+    }
+
+    .newgame {
+      top: 10rem;
+    }
+    
+    .rolldice {
+      top: 34rem;
+    }
+    
+    .hold {
+      top: 40rem;
+    }
+
+    .dice {
+      top: 24rem;
+    }
+  }
+/* ------ End Medias queries ------ */
