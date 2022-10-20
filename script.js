@@ -167,6 +167,17 @@ btnHold.addEventListener("click", function () {
   if (totalScore[activePlayer] >= 100) {
     document.querySelector(`.player-${activePlayer}`).classList.add("winner");
     play3();
+    btnHold.style.visibility = "hidden";
+    btnRoll.style.visibility = "hidden";
+    if (activePlayer == 0) {
+      setTimeout(function () {
+        alert(`YOU WIN !!!!!!!!  ${p1.innerHTML} win game !`);
+      }, 1000);
+    } else {
+      setTimeout(function () {
+        alert(`YOU WIN !!!!!!!!  ${p2.innerHTML} win game !`);
+      }, 1000);
+    }
     currentScore = 0;
     document.getElementById(`current-${activePlayer}`).textContent =
       currentScore;

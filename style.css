@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
@@ -59,7 +59,7 @@ main {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
-} 
+}
 
 .btn-rules {
   top: 11rem;
@@ -69,7 +69,7 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 30%;
   z-index: 10;
   background-color: white;
@@ -132,7 +132,7 @@ main {
   display: inline-block;
   margin-right: 0.7rem;
 }
-  
+
 .newgame {
   top: 4rem;
 }
@@ -250,7 +250,7 @@ main {
   color: #c7365f;
 }
 
-.winner{
+.winner {
   background-color: greenyellow;
 }
 
@@ -268,7 +268,8 @@ main {
 /* ------ Start Medias queries ------ */
 
 @media screen and (max-width: 800px) {
-  .current-score, .name {
+  .current-score,
+  .name {
     font-size: 2rem;
   }
 
@@ -282,7 +283,7 @@ main {
 
   .btn::first-letter {
     font-size: 0.5rem;
-}
+  }
 
   .dice {
     height: 5rem;
@@ -296,7 +297,7 @@ main {
   .rules h3 {
     font-size: 2.5rem;
   }
-  
+
   .rules p {
     font-size: 1.2rem;
     margin-bottom: 0.3rem;
@@ -306,31 +307,32 @@ main {
     width: 100px;
     height: 100px;
   }
+}
 
-  @media screen and (max-width: 570px) {
-    .player {
-      padding: 4rem;
-      flex: 25%;
-    }
-
-    .btn-rules {
-      top: 16rem;
-    }
-
-    .newgame {
-      top: 10rem;
-    }
-    
-    .rolldice {
-      top: 34rem;
-    }
-    
-    .hold {
-      top: 40rem;
-    }
-
-    .dice {
-      top: 24rem;
-    }
+@media screen and (max-width: 570px) {
+  .player {
+    padding: 4rem;
+    flex: 25%;
   }
+
+  .btn-rules {
+    top: 16rem;
+  }
+
+  .newgame {
+    top: 10rem;
+  }
+
+  .rolldice {
+    top: 34rem;
+  }
+
+  .hold {
+    top: 40rem;
+  }
+
+  .dice {
+    top: 24rem;
+  }
+}
 /* ------ End Medias queries ------ */
