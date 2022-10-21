@@ -334,5 +334,9 @@ main {
   .dice {
     top: 24rem;
   }
+
+  .rules {
+    width: 50%;
+  }
 }
 /* ------ End Medias queries ------ */
